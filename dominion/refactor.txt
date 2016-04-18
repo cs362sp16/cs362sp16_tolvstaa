@@ -1,0 +1,6 @@
+My process for extracting card functions was simply to make another class file;
+I broke out the functions one by one, determining which parameters needed to be
+passed from the original functions, and which ones could be declared inside the
+functions. This was made relatively simple by the fact that every single one of
+the cases returned at the end, so variables were not shared when cases cascaded
+into each other. I styled the function prototypes to improve long-term clarity.

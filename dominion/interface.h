@@ -85,12 +85,12 @@
 #define ONETHOUSAND 1000
 
 
-int addCardToHand(int player, int card, struct gameState *game); 
+int addCardToHand(int player, int card, gameState *game); 
 
-int countHandCoins(int player, struct gameState *game);
+int countHandCoins(int player, gameState *game);
 
 
-void executeBotTurn(int player, int *turnNum, struct gameState *game);
+void executeBotTurn(int player, int *turnNum, gameState *game);
 
 void phaseNumToName(int phase, char *name); 
 void cardNumToName(int card, char *name);
@@ -99,21 +99,21 @@ int getCardCost(int card);
 
 void printHelp(void);
 
-void printHand(int player, struct gameState *game);
+void printHand(int player, gameState *game);
 
-void printDeck(int player, struct gameState *game);
+void printDeck(int player, gameState *game);
 
-void printDiscard(int player, struct gameState *game);
+void printDiscard(int player, gameState *game);
 
-void printPlayed(int player, struct gameState *game);
+void printPlayed(int player, gameState *game);
 
-void printState(struct gameState *game);
+void printState(gameState *game);
 
-void printSupply(struct gameState *game);
+void printSupply(gameState *game);
 
-void printGameState(struct gameState *game);
+void printGameState(gameState *game);
 
-void printScores(struct gameState *game);
+void printScores(gameState *game);
 
 void selectKingdomCards(int randomSeed, int kingdomCards[NUM_K_CARDS]);
 

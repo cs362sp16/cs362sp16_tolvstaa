@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 int main (int argc, char** argv) {
-  struct gameState G;
-  struct gameState *p = &G;
+  gameState G;
+  gameState *p = &G;
 
   int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
 	       sea_hag, tribute, smithy};
@@ -39,7 +39,7 @@ int main (int argc, char** argv) {
     adventurerPos = i;
     }
 
-    if (whoseTurn(p) == 0) {
+    if (p->whoseTurn == 0) {
       if (smithyPos != -1) {
         printf("0: smithy played from position %d\n", smithyPos); 
 	playCard(smithyPos, -1, -1, -1, p); 

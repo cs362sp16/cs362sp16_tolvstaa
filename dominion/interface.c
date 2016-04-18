@@ -144,7 +144,7 @@ int getCardCost(int card) {
 
 
 
-void printHand(int player, struct gameState *game) {
+void printHand(int player, gameState *game) {
   int handCount = game->handCount[player];
   int handIndex;
   printf("Player %d's hand:\n", player);
@@ -160,7 +160,7 @@ void printHand(int player, struct gameState *game) {
 
 
 
-void printDeck(int player, struct gameState *game) {
+void printDeck(int player, gameState *game) {
   int deckCount = game->deckCount[player];
   int deckIndex;
   printf("Player %d's deck: \n", player);
@@ -174,7 +174,7 @@ void printDeck(int player, struct gameState *game) {
   printf("\n");
 }
 
-void printPlayed(int player, struct gameState *game) {
+void printPlayed(int player, gameState *game) {
   int playedCount = game->playedCardCount;
   int playedIndex;
   printf("Player %d's played cards: \n", player);
@@ -190,7 +190,7 @@ void printPlayed(int player, struct gameState *game) {
 
 
 
-void printDiscard(int player, struct gameState *game) {
+void printDiscard(int player, gameState *game) {
   int discardCount = game->discardCount[player];
   int discardIndex;
   printf("Player %d's discard: \n", player);
@@ -207,7 +207,7 @@ void printDiscard(int player, struct gameState *game) {
 
 
 
-void printSupply(struct gameState *game) {
+void printSupply(gameState *game) {
   int cardNum, cardCost, cardCount;
   char name[MAX_STRING_LENGTH];
   printf("#   Card          Cost   Copies\n");
@@ -223,7 +223,7 @@ void printSupply(struct gameState *game) {
 }
 
 
-void printState(struct gameState *game) {
+void printState(gameState *game) {
   int numActions = game->numActions;
   int numCoins = game->coins;
   int numBuys = game->numBuys;
@@ -234,7 +234,7 @@ void printState(struct gameState *game) {
   printf("Player %d:\n%s phase\n%d actions\n%d coins\n%d buys\n\n", currentPlayer, phaseName, numActions, numCoins, numBuys);
 }
 
-void printScores(struct gameState *game) {
+void printScores(gameState *game) {
   int playerNum, score[MAX_PLAYERS];
   int numPlayers = game->numPlayers;
   for(playerNum = 0; playerNum < numPlayers; playerNum++) {
@@ -275,7 +275,7 @@ void phaseNumToName(int phase, char *name) {
 }
 
 
-int addCardToHand(int player, int card, struct gameState *game) {
+int addCardToHand(int player, int card, gameState *game) {
   if(card >= adventurer && card < NUM_TOTAL_K_CARDS){
     int handTop = game->handCount[player];
     game->hand[player][handTop] = card;
@@ -310,7 +310,7 @@ void selectKingdomCards(int randomSeed, int kingCards[NUM_K_CARDS]) {
 }
 
 
-int countHandCoins(int player, struct gameState *game) {
+int countHandCoins(int player, gameState *game) {
   int card, index, coinage = 0;
 	
   for(index = 0; index < game->handCount[player]; index++) {
@@ -328,7 +328,7 @@ int countHandCoins(int player, struct gameState *game) {
 }
 
 
-void executeBotTurn(int player, int *turnNum, struct gameState *game) {
+void executeBotTurn(int player, int *turnNum, gameState *game) {
   int coins = countHandCoins(player, game);
 	
   printf("*****************Executing Bot Player %d Turn Number %d*****************\n", player, *turnNum);
@@ -357,7 +357,7 @@ void executeBotTurn(int player, int *turnNum, struct gameState *game) {
   if(player == (game->numPlayers -1)) (*turnNum)++;
   endTurn(game);
   if(! isGameOver(game)) {
-    int currentPlayer = whoseTurn(game);
+    int currentPlayer = game->whoseTurn;
     printf("Player %d's turn number %d\n\n", currentPlayer, (*turnNum));
   }
 }

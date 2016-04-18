@@ -23,10 +23,11 @@
 int main2(int argc, char *argv[]) {
 	//Default cards, as defined in playDom
 	int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
-	struct gameState g;
+	gameState g;
 	initializeGame(2,k,1,&g);
 	printf ("SUCCESSFUL INIT\n");
 	getchar();
+	return 0;
 }
 
 int main(int argc, char* argv[]) {
@@ -64,10 +65,10 @@ int main(int argc, char* argv[]) {
 	//Default cards, as defined in playDom
 	int kCards[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, sea_hag, tribute, smithy};
 
-	struct gameState g;
-	struct gameState * game = &g;
+	gameState g;
+	gameState * game = &g;
 
-	memset(game,0,sizeof(struct gameState));
+	memset(game,0,sizeof(gameState));
 		
 	if(argc != 2){
 		printf("Usage: player [integer random number seed]\n");
@@ -95,7 +96,7 @@ int main(int argc, char* argv[]) {
 		strcpy(command,"");
 		strcpy(cardName,"");
 		
-		currentPlayer = whoseTurn(game);
+		currentPlayer = game->whoseTurn;
 		
 		//If you are getting a seg fault comment this if block out
 		gameOver = isGameOver(game); 		
@@ -145,7 +146,7 @@ int main(int argc, char* argv[]) {
 			if(gameStarted == TRUE) {
 				if(currentPlayer == (game->numPlayers -1)) turnNum++;
 				endTurn(game);
-				currentPlayer = whoseTurn(game);
+				currentPlayer = game->whoseTurn;
 				printf("Player %d's turn number %d\n\n", currentPlayer, turnNum);
 			}
 
@@ -166,7 +167,7 @@ int main(int argc, char* argv[]) {
 			printf("\n");
 			if(outcome == SUCCESS){
 				gameStarted = TRUE;
-				currentPlayer = whoseTurn(game);
+				currentPlayer = game->whoseTurn;
 				printf("Player %d's turn number %d\n\n", currentPlayer, turnNum);
 			}
 
@@ -206,7 +207,7 @@ int main(int argc, char* argv[]) {
 			printSupply(game);
 		} else
 		if(COMPARE(command, whos) == 0) {
-			int playerNum =	whoseTurn(game);
+			int playerNum =	game->whoseTurn;
 			printf("Player %d's turn\n", playerNum);
 		} 
     	}
