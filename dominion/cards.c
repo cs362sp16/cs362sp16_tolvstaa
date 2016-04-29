@@ -171,7 +171,7 @@ int village_effect(gameState* state, int handPos) {
     drawCard(state->whoseTurn, state);
 
     // +2 Actions
-    state->numActions = state->numActions + 2;
+    state->numActions += 2;
 
     // discard played card from hand
     discardCard(handPos, state->whoseTurn, state, 0);
@@ -274,7 +274,7 @@ int steward_effect(gameState* state, int handPos, int choice1, int choice2, int 
         drawCard(state->whoseTurn, state); // +2 cards
         drawCard(state->whoseTurn, state);
     } else if (choice1 == 2) {
-        state->coins = state->coins + 2; // +2 coins
+        state->coins += 2; // +2 coins
     } else {
         discardCard(choice2, state->whoseTurn, state, 1); // trash 2 cards in hand
         discardCard(choice3, state->whoseTurn, state, 1);

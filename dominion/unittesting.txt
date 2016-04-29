@@ -1,0 +1,33 @@
+Functions tested:
+    nextPlayer()
+    discardCard()
+    fullDeckCount()
+    isGameOver()
+    
+Cards tested:
+    smithy
+    village
+    steward
+    great_hall
+    
+Code coverages in Dominion.c:
+    nextPlayer()     0.67%
+    discardCard()    4.01%
+    fullDeckCount()  4.01%
+    isGameOver()     3.01% 
+    smithy          14.38%
+    village         13.71%
+    steward         13.71%
+    great_hall      13.71%
+    
+The functions tested covered very little of dominion because they have very few
+statements compared to the rest of the (enormous) file. The cards covered
+significantly more, as they not only had a larger function initially, but also
+called other functions within dominion.
+
+I designed the unit tests to rely on as few external functions as possible, e.g.
+creating a gameState by hand, rather than relying on a function like
+initializeGame(). The card test requirements were designed by cross-referencing
+the implementations with the action specified on the physical card. My test
+containing multiple choice possibilities first initialized a gameState by hand,
+and cloned it to a separate instance for each test.

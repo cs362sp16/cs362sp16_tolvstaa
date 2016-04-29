@@ -1,0 +1,4 @@
+Bugs found:
+
+isGameOver() does not check the last 3 card supplies for emptiness
+coin handling is completely broken and disorganized

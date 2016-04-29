@@ -13,42 +13,42 @@
 
 /* hand# means index of a card in current active player's hand */
 
-enum CARD
-  {curse = 0,
-   estate,
-   duchy,
-   province,
+enum CARD {
+    curse = 0,
+    estate,
+    duchy,
+    province,
 
-   copper,
-   silver,
-   gold,
+    copper,
+    silver,
+    gold,
 
-   adventurer,
-   /* If no/only 1 treasure found, stop when full deck seen */
-   council_room,
-   feast, /* choice1 is supply # of card gained) */
-   gardens,
-   mine, /* choice1 is hand# of money to trash, choice2 is supply# of
-	    money to put in hand */
-   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */
-   smithy,
-   village,
+    adventurer,
+    /* If no/only 1 treasure found, stop when full deck seen */
+    council_room,
+    feast, /* choice1 is supply # of card gained) */
+    gardens,
+    mine, /* choice1 is hand# of money to trash, choice2 is supply# of
+	         money to put in hand */
+    remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */
+    smithy,
+    village,
 
-   baron, /* choice1: boolean for discard of estate */
-   /* Discard is always of first (lowest index) estate */
-   great_hall,
-   minion, /* choice1:  1 = +2 coin, 2 = redraw */
-   steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
-   tribute,
+    baron, /* choice1: boolean for discard of estate */
+    /* Discard is always of first (lowest index) estate */
+    great_hall,
+    minion, /* choice1:  1 = +2 coin, 2 = redraw */
+    steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
+    tribute,
 
-   ambassador, /* choice1 = hand#, choice2 = number to return to supply */
-   cutpurse,
-   embargo, /* choice1 = supply# */
-   outpost,
-   salvager, /* choice1 = hand# to trash */
-   sea_hag,
-   treasure_map
-  };
+    ambassador, /* choice1 = hand#, choice2 = number to return to supply */
+    cutpurse,
+    embargo, /* choice1 = supply# */
+    outpost,
+    salvager, /* choice1 = hand# to trash */
+    sea_hag,
+    treasure_map
+};
 
 typedef struct {
   int numPlayers; //number of players
@@ -76,8 +76,8 @@ typedef struct {
 
 gameState* newGame();
 
-int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
-		  int k8, int k9, int k10);
+/* int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
+		  int k8, int k9, int k10); */
 
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 		   gameState *state);
@@ -88,8 +88,7 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 Cards not in game should initialize supply position to -1 */
 
 int shuffle(int player, gameState *state);
-/* Assumes all cards are now in deck array (or hand/played):  discard is
- empty */
+/* Assumes all cards are now in deck array (or hand/played):  discard is empty */
 
 int playCard(int handPos, int choice1, int choice2, int choice3,
 	     gameState *state);
@@ -113,17 +112,14 @@ int fullDeckCount(int player, int card, gameState *state);
 int nextPlayer(gameState* state);
 
 int endTurn(gameState *state);
-/* Must do phase C and advance to next player; do not advance whose turn
-   if game is over */
+/* Must do phase C and advance to next player; do not advance whose turn if game is over */
 
 int isGameOver(gameState *state);
 
 int scoreFor(int player, gameState *state);
-/* Negative here does not mean invalid; scores may be negative,
-   -9999 means invalid input */
+/* Negative here does not mean invalid; scores may be negative, -9999 means invalid input */
 
 int getWinners(int players[MAX_PLAYERS], gameState *state);
-/* Set array position of each player who won (remember ties!) to
-   1, others to 0 */
+/* Set array position of each player who won (remember ties!) to 1, others to 0 */
 
 #endif
