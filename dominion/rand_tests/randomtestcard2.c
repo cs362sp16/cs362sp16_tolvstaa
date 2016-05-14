@@ -9,8 +9,14 @@ int main(int argc, char** argv) {
   	gameState* state = gsGenRand(seed, great_hall);
   	gameState* initial = gsCopy(state);
   	
+  	my_assert(state->numActions != 0);
+  	my_assert(state->handCount[0] != 0);
+  	
   	playCard(0,0,0,0,state);
   	
+  	my_assert(state->numActions == initial->numActions);
+  	my_assert(state->handCount[0] == initial->handCount[0]);
   	
+  	printf("Testing complete.\n");
     return 0;
 }

@@ -13,5 +13,7 @@ int main(int argc, char** argv) {
  	playCard(0,0,0,0,state);
  	
  	my_assert(!strncmp((char*) state, (char*) initial, sizeof(gameState)));
+ 	
+ 	printf("Testing complete.\n");
     return 0;
 }
