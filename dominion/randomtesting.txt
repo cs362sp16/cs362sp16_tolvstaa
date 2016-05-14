@@ -1,4 +1,13 @@
 My random testers work by generating a semiplausible gameState, running the card
 function on it, and checking the output against the original gameState to ensure
-the card is fulfilling its function.
+the card is functioning correctly, and in a perfect world, also making sure that
+the cards don't have any side effects (which would be horribly cumbersome here).
 
+My random testers appear to have achieved approximately the same coverage, since
+the functions we are testing are very simple; they have very few statements, and
+not much branching logic. This facilitates writing very comprehensive tests, and
+running a random tester even just a few times is likely to cover all test cases.
+
+Random testing is much more likely to identify errors (if implemented well) than
+unit testing, because it provides a richer testing domain and more opportunities
+for functions to show errors. In this case, random testing would perform better.
