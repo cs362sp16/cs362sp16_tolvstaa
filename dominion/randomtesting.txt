@@ -1,0 +1,4 @@
+My random testers work by generating a semiplausible gameState, running the card
+function on it, and checking the output against the original gameState to ensure
+the card is fulfilling its function.
+

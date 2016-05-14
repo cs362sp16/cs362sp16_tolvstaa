@@ -11,8 +11,9 @@
     } \
 }
 
+int randCard(int);
 gameState* gsGenPlain();
-gameState* gsGenRand();
+gameState* gsGenRand(int, int);
 gameState* gsCopy(const gameState*);
 
 #endif
