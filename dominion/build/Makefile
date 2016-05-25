@@ -6,7 +6,7 @@ CTEST=cardtest1 cardtest2 cardtest3 cardtest4
 RTEST=randomtestcard1 randomtestcard2 randomtestadventurer
 TDEPS=dominion.o cards.o rngs.o test_helper.o
 
-all: playdom player test
+all: playdom player test difftest
 
 playdom: ../playdom.c dominion.o
 	$(CC) -o playdom ../playdom.c -g dominion.o cards.o rngs.o $(CFLAGS)
@@ -14,6 +14,13 @@ playdom: ../playdom.c dominion.o
 player: ../player.c dominion.o interface.o
 	$(CC) -o player ../player.c -g dominion.o cards.o rngs.o interface.o $(CFLAGS)
 
+testdominion: ../testdominion.c dominion.o interface.o
+	$(CC) -o testdominion ../testdominion.c dominion.o cards.o rngs.o interface.o $(CFLAGS)
+	./testdominion 42
+
+difftest:
+	./diffdominion ../ ~/cs362sp16_phillels/dominion 42
+	
 test: $(UTEST) $(CTEST) $(RTEST)
 
 autotest: test
@@ -49,7 +56,7 @@ interface.o: ../interface.h ../interface.c
 
 
 clean:
-	rm -f playdom test player
+	rm -f playdom test player testdominion
 	rm -f $(RTEST) $(CTEST) $(UTEST)
 	rm -f *.o *.so
 	rm -f *.gcov *.gcda *.gcno *.a *.dSYM

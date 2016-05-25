@@ -1,0 +1,793 @@
+It is very difficult to figure out who is right based on this testing. This is a
+sub-optimal situation, as the program is very complex, and one small change can
+cascade into a very large difference in outputs, which is hard to trace back to
+a single origin.
+
+
+
+---- ./dominion ----
+
+---- ../cs362sp16_phillels/dominion ----
+
+TEST FAILED
+0a1,5
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+1a7,13
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+2a15,21
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+3a23,29
+> Entering buyCard...
+> You bought card number 18 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+4a31,38
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 2 coins.
+> Deck count now: 12
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+5a40,47
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 1 coins.
+> Deck count now: 12
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+6a49,55
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+7a57,63
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+8a65,72
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Deck count now: 12
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+9a74,81
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Deck count now: 12
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+10a83,89
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+11a91,97
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 4 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+12a99,106
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Deck count now: 12
+> Current hand count: 4
+13a108,115
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Deck count now: 11
+> Current hand count: 4
+14a117,123
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+15a125,131
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+16a133,139
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+17a141,147
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 4 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+18a149,156
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Deck count now: 18
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+19a158,165
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Deck count now: 18
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+20a167,173
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+21a175,181
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+22a183,189
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+23a191,197
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+24a199,206
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Deck count now: 18
+> Current hand count: 4
+25a208,215
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Deck count now: 18
+> Current hand count: 3
+> Current hand count: 4
+26a217,223
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+27a225,231
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+28a233,239
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+29a241,247
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+30a249,255
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+31a257,263
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+32a265,272
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Deck count now: 23
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+33a274,281
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Deck count now: 23
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+34a283,289
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+35a291,297
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+36a299,305
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+37a307,313
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+38a315,321
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+39a323,329
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+40a331,337
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+41a339,346
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Deck count now: 23
+> Current hand count: 4
+42a348,355
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Deck count now: 28
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+43a357,363
+> Entering buyCard...
+> You bought card number 0 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+44a365,371
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+45a373,379
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+46a381,387
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+47a389,395
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+48a397,403
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+49a405,411
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+50a413,419
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+51a421,428
+> Entering buyCard...
+> You bought card number 25 for 4 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Deck count now: 29
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+52a430,437
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Deck count now: 29
+> Current hand count: 3
+> Current hand count: 4
+53a439,445
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+54a447,453
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+55a455,461
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+56a463,469
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+57a471,477
+> Entering buyCard...
+> You bought card number 1 for 2 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+58a479,485
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+59a487,493
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+60a495,501
+> Entering buyCard...
+> You bought card number 16 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+61a503,509
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+62a511,517
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+63a519,526
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Deck count now: 34
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+64a528,535
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Deck count now: 34
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+65a537,543
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+66a545,551
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+67a553,559
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+68a561,567
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+69a569,575
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+70a577,583
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+71a585,591
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+72a593,599
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+73a601,607
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+74a609,615
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+75a617,623
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+76a625,631
+> Entering buyCard...
+> You bought card number 5 for 3 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+77a633,640
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Deck count now: 38
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+78a642,649
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Deck count now: 40
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+79a651,657
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+80a659,665
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+81a667,673
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+82a675,681
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+83a683,689
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 4 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+85,86c691,773
+< Copper diff: 16
+< Player 0:
+---
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 85.
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 86.
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 87.
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 88.
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 89.
+> Entering buyCard...
+> You do not have enough money to buy that. You have 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 90.
+> Entering buyCard...
+> There are not any of that type of card left
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 91.
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 2 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Deck count now: 39
+> Current hand count: 3
+> Current hand count: 4
+> Turn 92.
+> Entering buyCard...
+> You bought card number 4 for 0 coins. You now have 0 buys and 3 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Turn 93.
+> Entering buyCard...
+> You bought card number 22 for 2 coins. You now have 0 buys and 1 coins.
+> Current hand count: 0
+> Current hand count: 1
+> Current hand count: 2
+> Current hand count: 3
+> Current hand count: 4
+> Player 0 won with a score of 7
+> Copper diff: 19
+> Player 1:
+89c776
+< 3 coins
+---
+> 2 coins

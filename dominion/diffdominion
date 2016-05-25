@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -e
+
+# mkdir
+tempdir="tempdiffdominion$$"
+mkdir $tempdir
+
+# compile
+clang $1/testdominion.c $1/{dominion.c,cards.c,rngs.c,interface.c} -o $tempdir/t1 -lm
+clang $1/testdominion.c $2/{dominion.c,cards.c,rngs.c,interface.c} -o $tempdir/t2 -lm
+
+# run
+echo ---- $1 ----
+$tempdir/t1 $3 > $tempdir/result.t1.out
+echo
+
+echo ---- $2 ----
+$tempdir/t2 $3 > $tempdir/result.t2.out
+echo
+
+# diff
+code=0
+diff $tempdir/result.t1.out $tempdir/result.t2.out >/dev/null || code=$?
+
+if [ $code == 0 ]; then
+    echo TEST PASSED
+else
+    echo TEST FAILED
+    diff $tempdir/result.t1.out $tempdir/result.t2.out
+fi
+
+# clean
+rm -rf $tempdir
