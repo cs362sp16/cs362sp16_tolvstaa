@@ -6,7 +6,16 @@ CTEST=cardtest1 cardtest2 cardtest3 cardtest4
 RTEST=randomtestcard1 randomtestcard2 randomtestadventurer
 TDEPS=dominion.o cards.o rngs.o test_helper.o
 
-all: playdom player test difftest
+all: playdom player test
+
+tarantula: ttest
+	../tarantula/tarantula.py
+
+ttest: ../tarantula/ttestdriver.c $(TDEPS)
+	$(CC) -o ttest ../tarantula/ttestdriver.c $(TDEPS) $(CFLAGS)
+	
+difftest:
+	../diffdominion ../ ~/cs362sp16_phillels/dominion 42
 
 playdom: ../playdom.c dominion.o
 	$(CC) -o playdom ../playdom.c -g dominion.o cards.o rngs.o $(CFLAGS)
@@ -17,9 +26,6 @@ player: ../player.c dominion.o interface.o
 testdominion: ../testdominion.c dominion.o interface.o
 	$(CC) -o testdominion ../testdominion.c dominion.o cards.o rngs.o interface.o $(CFLAGS)
 	./testdominion 42
-
-difftest:
-	./diffdominion ../ ~/cs362sp16_phillels/dominion 42
 	
 test: $(UTEST) $(CTEST) $(RTEST)
 
