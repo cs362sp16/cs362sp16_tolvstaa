@@ -47,7 +47,7 @@ if __name__ == "__main__":
         
         # generage coverage report
         print >> sys.stderr, "gcov,",
-        subprocess.call(['gcov', fname_csrc], stdout=devnull, stderr=devnull);
+        subprocess.call(['gcov', fname_csrc, '-o '+fname_gcno], stdout=devnull, stderr=devnull);
         
         # parse and analyze coverage report
         print >> sys.stderr, "analyzing,",

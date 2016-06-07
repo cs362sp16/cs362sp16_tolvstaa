@@ -29,7 +29,7 @@ int treasureCount(gameState* state) {
 int main(int argc, char** argv) {
     int seed = atoi(argv[1]);
  	
- 	alarm(2);
+ 	alarm(2);/*
  	if(!seed%2) {
  	    int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
 	        sea_hag, tribute, smithy};
@@ -38,21 +38,21 @@ int main(int argc, char** argv) {
         my_assert(state->numPlayers == 2);
         my_assert(!isGameOver(state));
         free(state);
- 	}
+ 	}*/
  	
- 	if(!seed%3) {
+ 	if(!(seed+1)%2) {
  	    gameState* state = gsGenRand(seed, adventurer);
  	    gameState* initial = gsCopy(state);
      	signal(SIGALRM, no_halt);
-     	
-     	
-     	playCard(0, 0, 0, 0, state);
-     	
         
-     	my_assert(treasureCount(state) == treasureCount(initial) + 2); // has 2 more treasure cards in hand
-     	my_assert(initial->deckCount[0] - state->deckCount[0] > 1); // drew at least 2 cards
-     	free(state);
-     	free(initial);
+        playCard(0,0,0,0,state);
+        
+        my_assert(state->numActions == initial->numActions);
+        my_assert(state->handCount[0] == initial->handCount[0]);
+        
+        printf("Testing complete.\n");
+        return 0;
+
  	}
  	
  	alarm(0);

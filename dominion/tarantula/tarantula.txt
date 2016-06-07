@@ -1,0 +1,23 @@
+I wrote a tarantula tester for my adventure card in python. The tester begins
+by counting up the number of lines in the source file and allocating 2 lists of
+zeroes with the same length as the file. The tester then repeatedly runs the
+test, failing if any of the assertions fail. After each run of the test, it
+uses gcov to determine how many times the lines ran during that test, and
+increments the vector that many times at the line number's index.
+
+Then, the file is printed. I use a slightly simplified version of the formula
+to determine which lines to mark: if the line was run and the ratio of success
+to failure is not greater than the file's total failed/passed ratio, mark it green.
+Otherwise, if the line was run and the ratio is equal to or greater than the
+file's total, mark it yellow. Finally, if the line was included in no
+successful runs whatsoever, mark it red.
+
+Since fixing my testing procedures for Adventure, none of my random testers
+were failing any longer, and I unfortunately ran out of time to implement a new
+random tester.
+
+However, if I did have more failing tests, tarantula testing could be very well
+used to narrow down where the bad code was by intermittently running tests that
+pass and tests that fail, and focusing on the areas (marked in red and yellow)
+where the tests fail more than they succeed, and ignoring known good code
+(marked in green).

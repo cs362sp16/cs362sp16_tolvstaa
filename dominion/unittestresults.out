@@ -1,0 +1,67 @@
+---- unittest1 ----
+Testing nextPlayer...
+nextPlayer testing complete.
+
+File '../dominion.c'
+Lines executed:0.67% of 299
+
+---- unittest2 ----
+Testing discardCard...
+discardCard testing complete.
+
+File '../dominion.c'
+Lines executed:4.01% of 299
+
+---- unittest3 ----
+Testing fullDeckCount...
+fullDeckCount testing complete.
+
+File '../dominion.c'
+Lines executed:4.01% of 299
+
+---- unittest4 ----
+Assertion failed at ../unit_tests/unittest4.c:21 in function main:
+	Condition: isGameOver(state)
+Testing isGameOver...
+isGameOver testing complete.
+
+File '../dominion.c'
+Lines executed:3.01% of 299
+
+---- cardtest1 ----
+Current hand count: 3
+Current hand count: 4
+Current hand count: 5
+Testing smithy card...
+smithy card testing complete.
+
+File '../dominion.c'
+Lines executed:14.38% of 299
+
+---- cardtest2 ----
+Current hand count: 3
+Testing village card...
+village card testing complete.
+
+File '../dominion.c'
+Lines executed:13.71% of 299
+
+---- cardtest3 ----
+Current hand count: 3
+Current hand count: 4
+Assertion failed at ../card_tests/cardtest3.c:31 in function main:
+	Condition: state->coins == 2
+Testing steward card...
+steward card testing complete.
+
+File '../dominion.c'
+Lines executed:13.71% of 299
+
+---- cardtest4 ----
+Current hand count: 3
+Testing great_hall card...
+great_hall card testing complete.
+
+File '../dominion.c'
+Lines executed:13.71% of 299
+
