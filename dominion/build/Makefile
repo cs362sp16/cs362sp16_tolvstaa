@@ -1,4 +1,4 @@
-CFLAGS=-Wall -fpic -coverage -lm -std=c11
+CFLAGS=-Wall -fpic -coverage -lm -std=c11 -g
 CC=gcc
 
 UTEST=unittest1 unittest2 unittest3 unittest4

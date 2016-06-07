@@ -35,7 +35,7 @@ gameState* gsGenRand(int seed, int iCard) {
     // give a sane randomization of gameState
     srand(seed);
     // random number of players
-    gs->numPlayers = rand() % MAX_PLAYERS;
+    gs->numPlayers = (rand() % MAX_PLAYERS)+1;
     gs->numActions = 5;
     
     for(int i=0; i<gs->numPlayers; i++) { // for each player

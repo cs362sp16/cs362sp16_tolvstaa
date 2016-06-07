@@ -1,0 +1,18 @@
+I decided to do my bugfix on adventurer. Adventurer was experiencing a bug in
+which it was occasionally not adding the requisite 2 additional treasure cards
+to the hand of the current player.
+
+I was able to identify (using my random tester and bash) a seed at which the
+error was known to occur. Then I used GDB to identify the problem. I set a
+break point at the beginning of playCard, and stepped through the code,
+tracking variables to see where the error was occurring.
+
+Lo and behold, the error was not in fact in adventure, but in my testing
+helper functons. When I was setting the number of players, I was choosing from a
+range of 0-3 instead of 1-4. This was causing the loop which iterated over the
+players to iterate 0 times, meaning that the target card to be tested was never
+set in any player's hand. This caused playCard to exit prematurely, and for the
+actions of a given card to never be executed.
+
+The principles that were the most pertinent here were 2. Make it fail, and 7.
+Check the plug.
