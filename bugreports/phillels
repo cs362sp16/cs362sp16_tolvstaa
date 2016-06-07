@@ -1,0 +1,6 @@
+1. Adventurer_action has a bug causing the player's hand count to not match the
+    amount of treasure drawn at the end of the test.
+2. Tests for embargo fail because embargo interacts with coins, and the coins
+    implementation has not been changed from the original codebase, and is
+    therefore improperly handled across all cards.
+3. 
