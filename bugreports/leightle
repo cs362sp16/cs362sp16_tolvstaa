@@ -1,0 +1,5 @@
+1. Village: Test complains about too few actions being added to the gamestate
+    after village is played.
+2. BuyCard: Test complains about permission of function during phases other
+    than 'buy'. The actual code does not appear to make any attempt to stop
+    it.

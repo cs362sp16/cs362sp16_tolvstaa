@@ -3,4 +3,5 @@
 2. Tests for embargo fail because embargo interacts with coins, and the coins
     implementation has not been changed from the original codebase, and is
     therefore improperly handled across all cards.
-3. 
+3. Sea Hag uses post-decrement instead of pre-decrement, and accidentally post-
+    decrements twice instead of using n-1.
